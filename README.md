@@ -100,6 +100,10 @@ RESTful API built with Laravel Lumen & PostgreSQL on Docker
 Web server is on 127.0.0.1:8080 <br>
 PostgreSQL is on host.docker.internal:8084
 
+Lumen response time exceeding 100ms
+After due research it looks like the following line: header('HTTP/1.0 200 OK1200'); in Symfony\Component\HttpFoundation is causing the extra 250ms. So I guess its not related to lumen
+                 
+
 ## License
 
 This project is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
